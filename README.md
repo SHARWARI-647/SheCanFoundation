@@ -86,6 +86,8 @@ SheCanFoundation/
 │
 └── README.md
 
+---
+
 **# Output**
 <img src="SheCanFoundation\images\Screenshot 2026-05-28 141642.png" width="500" height="600">
 <img src="SheCanFoundation\images\Screenshot 2026-05-28 141704.png" width="500" height="600">
