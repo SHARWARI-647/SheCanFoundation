@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>She Can Foundation</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+
+            font-family:'Poppins', sans-serif;
+
+            background:#f5f7ff;
+
+            min-height:100vh;
+
+            color:#333;
+        }
+
+        /* NAVBAR */
+
+        .navbar{
+
+            width:100%;
+
+            display:flex;
+
+            justify-content:space-between;
+
+            align-items:center;
+
+            padding:20px 70px;
+
+            background:white;
+
+            box-shadow:0 2px 15px rgba(0,0,0,0.08);
+
+            position:sticky;
+
+            top:0;
+
+            z-index:1000;
+        }
+
+        .logo{
+
+            font-size:26px;
+
+            font-weight:700;
+
+            color:#4f46e5;
+        }
+
+        .logo i{
+
+            margin-right:10px;
+
+            color:#ff4b8b;
+        }
+
+        .nav-links a{
+
+            text-decoration:none;
+
+            margin-left:30px;
+
+            color:#333;
+
+            font-weight:500;
+
+            transition:0.3s;
+        }
+
+        .nav-links a:hover{
+
+            color:#4f46e5;
+        }
+
+        /* MAIN */
+
+        .main-container{
+
+            padding:60px 30px;
+        }
+
+        .container{
+
+            max-width:1200px;
+
+            margin:auto;
+
+            display:grid;
+
+            grid-template-columns:1fr 1fr;
+
+            background:white;
+
+            border-radius:30px;
+
+            overflow:hidden;
+
+            box-shadow:0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        /* LEFT SECTION */
+
+        .left-section{
+
+            background:linear-gradient(
+                135deg,
+                #4f46e5,
+                #7c3aed,
+                #9333ea
+            );
+
+            color:white;
+
+            padding:70px 50px;
+
+            display:flex;
+
+            flex-direction:column;
+
+            justify-content:center;
+
+            position:relative;
+        }
+
+        .left-section::before{
+
+            content:"";
+
+            position:absolute;
+
+            width:250px;
+
+            height:250px;
+
+            background:rgba(255,255,255,0.1);
+
+            border-radius:50%;
+
+            top:-60px;
+
+            right:-60px;
+        }
+
+        .left-section h1{
+
+            font-size:46px;
+
+            line-height:1.2;
+
+            margin-bottom:25px;
+        }
+
+        .left-section p{
+
+            font-size:16px;
+
+            line-height:1.9;
+
+            margin-bottom:20px;
+
+            color:#f1f1f1;
+        }
+
+        .features{
+
+            margin-top:25px;
+        }
+
+        .feature{
+
+            display:flex;
+
+            align-items:center;
+
+            margin-bottom:18px;
+
+            background:rgba(255,255,255,0.12);
+
+            padding:14px;
+
+            border-radius:12px;
+
+            backdrop-filter:blur(5px);
+        }
+
+        .feature i{
+
+            font-size:22px;
+
+            margin-right:15px;
+
+            color:#ffd166;
+        }
+
+        /* RIGHT SECTION */
+
+        .right-section{
+
+            padding:60px 45px;
+        }
+
+        .form-title{
+
+            text-align:center;
+
+            margin-bottom:35px;
+        }
+
+        .form-title h2{
+
+            font-size:34px;
+
+            color:#333;
+
+            margin-bottom:10px;
+        }
+
+        .form-title p{
+
+            color:#666;
+
+            font-size:15px;
+        }
+
+        .input-box{
+
+            position:relative;
+
+            margin-bottom:22px;
+        }
+
+        .input-box i{
+
+            position:absolute;
+
+            top:16px;
+
+            left:16px;
+
+            color:#777;
+        }
+
+        .input-box input,
+        .input-box textarea{
+
+            width:100%;
+
+            padding:15px 15px 15px 48px;
+
+            border:1px solid #ddd;
+
+            border-radius:14px;
+
+            font-size:15px;
+
+            outline:none;
+
+            transition:0.3s;
+
+            background:#fafafa;
+        }
+
+        .input-box input:focus,
+        .input-box textarea:focus{
+
+            border-color:#4f46e5;
+
+            background:white;
+
+            box-shadow:0 0 0 4px rgba(79,70,229,0.1);
+        }
+
+        textarea{
+
+            resize:none;
+
+            height:130px;
+        }
+
+        button{
+
+            width:100%;
+
+            padding:16px;
+
+            border:none;
+
+            border-radius:14px;
+
+            background:linear-gradient(
+                135deg,
+                #4f46e5,
+                #7c3aed
+            );
+
+            color:white;
+
+            font-size:16px;
+
+            font-weight:600;
+
+            cursor:pointer;
+
+            transition:0.3s;
+        }
+
+        button:hover{
+
+            transform:translateY(-2px);
+
+            box-shadow:0 8px 20px rgba(79,70,229,0.25);
+        }
+
+        .note{
+
+            margin-top:18px;
+
+            text-align:center;
+
+            color:#777;
+
+            font-size:13px;
+
+            line-height:1.7;
+        }
+
+        /* FOOTER */
+
+        footer{
+
+            margin-top:40px;
+
+            background:white;
+
+            padding:25px;
+
+            text-align:center;
+
+            color:#666;
+
+            box-shadow:0 -2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:950px){
+
+            .container{
+
+                grid-template-columns:1fr;
+            }
+
+            .navbar{
+
+                padding:18px 25px;
+
+                flex-direction:column;
+
+                gap:15px;
+            }
+
+            .left-section{
+
+                padding:50px 35px;
+            }
+
+            .right-section{
+
+                padding:45px 30px;
+            }
+
+            .left-section h1{
+
+                font-size:38px;
+            }
+        }
+
+        @media(max-width:600px){
+
+            .nav-links{
+
+                display:flex;
+
+                flex-wrap:wrap;
+
+                justify-content:center;
+            }
+
+            .nav-links a{
+
+                margin:8px;
+            }
+
+            .left-section h1{
+
+                font-size:32px;
+            }
+
+            .form-title h2{
+
+                font-size:28px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-heart"></i>
+
+        She Can Foundation
+
+    </div>
+
+    <div class="nav-links">
+
+        <a href="/">Home</a>
+
+        <a href="/responses">Responses</a>
+
+        <a href="/admin">Admin</a>
+
+    </div>
+
+</nav>
+
+<!-- MAIN -->
+
+<div class="main-container">
+
+    <div class="container">
+
+        <!-- LEFT -->
+
+        <div class="left-section">
+
+            <h1>
+                Empowering Women Through Connection
+            </h1>
+
+            <p>
+
+                She Can Foundation provides a platform
+                for individuals to seek guidance,
+                support, mentorship, and collaboration
+                opportunities.
+
+            </p>
+
+            <p>
+
+                Share your thoughts, concerns,
+                suggestions, or support requests.
+                Our team is always ready to help.
+
+            </p>
+
+            <div class="features">
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <span>Women Empowerment Programs</span>
+
+                </div>
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-comments"></i>
+
+                    <span>Direct Communication & Support</span>
+
+                </div>
+
+                <div class="feature">
+
+                    <i class="fa-solid fa-handshake"></i>
+
+                    <span>Community & Social Initiatives</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="right-section">
+
+            <div class="form-title">
+
+                <h2>Contact Us</h2>
+
+                <p>
+
+                    Fill in your details and send us your message.
+
+                </p>
+
+            </div>
+
+            <form action="/contact" method="post">
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <input type="text"
+                           name="fullname"
+                           placeholder="Full Name"
+                           required>
+
+                </div>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <input type="email"
+                           name="email"
+                           placeholder="Email Address"
+                           required>
+
+                </div>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <input type="text"
+                           name="phone"
+                           placeholder="Phone Number"
+                           required>
+
+                </div>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-tag"></i>
+
+                    <input type="text"
+                           name="subject"
+                           placeholder="Subject"
+                           required>
+
+                </div>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-message"></i>
+
+                    <textarea name="message"
+                              placeholder="Write your message..."
+                              required></textarea>
+
+                </div>
+
+                <button type="submit">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Submit Message
+
+                </button>
+
+            </form>
+
+            <p class="note">
+
+                Your information is secure and used only
+                for communication purposes.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 She Can Foundation |
+    Empowering Communities Through Technology
+
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family: 'Poppins', sans-serif;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+    position:relative;
+}
+
+/* Animated Background */
+
+.background{
+
+    position:absolute;
+    width:100%;
+    height:100%;
+
+    background: linear-gradient(
+        135deg,
+        #a156f2,
+        #4d84e4,
+        #f3598f
+    );
+
+    background-size:400% 400%;
+
+    animation: gradientBG 12s ease infinite;
+
+    z-index:-1;
+}
+
+@keyframes gradientBG {
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+/* Card */
+
+.container{
+
+    width:420px;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    box-shadow:0 8px 32px rgba(0,0,0,0.2);
+
+    text-align:center;
+
+    color:white;
+}
+
+/* Logo */
+
+.logo{
+
+    width:80px;
+    height:80px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin-bottom:20px;
+}
+
+.logo i{
+
+    font-size:35px;
+    color:#ff4b8b;
+}
+
+/* Heading */
+
+h1{
+
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.subtitle{
+
+    font-size:14px;
+    margin-bottom:25px;
+
+    color:#f1f1f1;
+}
+
+/* Input Fields */
+
+.input-box{
+
+    position:relative;
+    margin-bottom:18px;
+}
+
+.input-box i{
+
+    position:absolute;
+    left:15px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#666;
+}
+
+.input-box input,
+.input-box textarea{
+
+    width:100%;
+
+    padding:14px 14px 14px 45px;
+
+    border:none;
+    outline:none;
+
+    border-radius:12px;
+
+    background:white;
+
+    font-size:15px;
+}
+
+/* Textarea */
+
+.textarea-box i{
+
+    top:22px;
+}
+
+textarea{
+
+    resize:none;
+    height:120px;
+}
+
+/* Button */
+
+button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#ff4b8b;
+
+    color:white;
+
+    font-size:16px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    background:#ff2d75;
+
+    box-shadow:0 5px 15px rgba(255,75,139,0.4);
+}
+
+/* Responsive */
+
+@media(max-width:500px){
+
+    .container{
+
+        width:90%;
+        padding:25px;
+    }
+
+    h1{
+
+        font-size:26px;
+    }
+}
