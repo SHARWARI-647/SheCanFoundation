@@ -68,6 +68,16 @@ Built using:
 
 ---
 
+# Output
+
+<img src="images/Screenshot 2026-05-28 141603.png">
+<img src="images/Screenshot 2026-05-28 141704.png">
+<img src="images/Screenshot 2026-05-28 141715.png">
+<img src="images/Screenshot 2026-05-28 141728.png">
+<img src="images/Screenshot 2026-05-28 141603.png">
+<img src="images/Screenshot 2026-05-28 141756.png">
+<img src="images/Screenshot 2026-05-28 141808.png">
+
 # 📂 Project Structure
 
 ```text
@@ -86,13 +96,3 @@ SheCanFoundation/
 │
 └── README.md
 
----
-
-## Output
-<img src="images/Screenshot 2026-05-28 141603.png">
-<img src="images/Screenshot 2026-05-28 141704.png">
-<img src="images/Screenshot 2026-05-28 141715.png">
-<img src="images/Screenshot 2026-05-28 141728.png">
-<img src="images/Screenshot 2026-05-28 141603.png">
-<img src="images/Screenshot 2026-05-28 141756.png">
-<img src="images/Screenshot 2026-05-28 141808.png">
